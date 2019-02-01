@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="fundo-header">
+    <ion-title>LIBONGO</ion-title> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h2 id="texto-destaque">Conversor de Moedas</h2>
+
+  <div id="conversor">
+    <ion-item class="selecionar-moeda">
+      <ion-label>Moeda</ion-label> 
+      <ion-select  value="SimbMoeda1" class="firstSelect" [(ngModel)]="SimbMoeda1" okText="OK" cancelText="Cancelar" interface="popover">
+        <ion-select-option value="$">Dolar Americano</ion-select-option>
+        <ion-select-option value="€">Euro Europa</ion-select-option>
+        <ion-select-option value="Kz">Kwanza Angola</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div class="conversor-wapper">
+      <ion-label class="simbolo-moeda">{{ SimbMoeda1 }}</ion-label>
+      <ion-input autofocus class="valor" type="number" (input)="calcular($event.target.value)"> </ion-input>
+    </div>
+    
+    <div id="icones-cima-baixo">
+      <ion-icon name="arrow-down"></ion-icon>
+    </div>
+
+    <ion-item class="selecionar-moeda">
+      <ion-label>Moeda</ion-label>
+      <ion-select value="SimbMoeda2" okText="OK" [(ngModel)]="SimbMoeda2" cancelText="Cancelar" interface="popover">
+        <ion-select-option value="Kz">Kwanza Angola</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <div class="conversor-wapper">
+      <ion-label class="simbolo-moeda">{{ SimbMoeda2 }}</ion-label>
+      <ion-input class="valor" type="text" readonly value="{{ resultCalc | number }}"></ion-input>
+    </div>
+
+    <div id="caixa-cotacao">
+      <span>$ 1 = {{ dolar }} Kz</span> 
+      <span>€ 1 = {{ euro }} Kz</span> 
+    </div>
+  </div>
+</ion-content>

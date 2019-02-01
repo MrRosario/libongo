@@ -1,0 +1,20 @@
+{
+  "name": "libongo",
+  "version": "1.0.0",
+  "description": "Api cambio Angola",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eugenio Rosario",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
