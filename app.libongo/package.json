@@ -2,15 +2,14 @@
   "name": "libongo",
   "version": "1.0.0",
   "author": "Eugenio Rosario",
-  "homepage": "https://ionicframework.com/",
+  "homepage": "https://applibongo.netlify.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "gh-pages": "ng build --base-href 'https://MrRosario.github.io/app.libongo/' --prod && npx ngh --dir=www/"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -41,10 +40,11 @@
     "@angular/compiler-cli": "~7.2.2",
     "@angular/language-service": "~7.2.2",
     "@ionic/angular-toolkit": "~1.3.0",
-    "@types/node": "~10.12.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~10.12.0",
     "codelyzer": "~4.5.0",
+    "ionic": "^4.10.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.1.4",

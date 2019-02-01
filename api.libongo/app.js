@@ -1,3 +1,4 @@
+'use strict'
 const app   = require('./bin/express');
 const porta = process.env.PORT || 3000;
 

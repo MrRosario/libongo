@@ -2,7 +2,7 @@
   "index": "/index.html",
   "assetGroups": [
     {
-      "name": "Libongo",
+      "name": "app",
       "installMode": "prefetch",
       "resources": {
         "files": [
