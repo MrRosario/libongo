@@ -8,7 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomePage implements OnInit {
   
-  url: string = 'http://localhost:3000/api/cotacao'
+  //url1: string = 'http://localhost:3000/api/cotacao'
+  url: string = 'https://libongo.herokuapp.com/api/cotacao';
   SimbMoeda1: string =  "$";
   SimbMoeda2: string = "Kz";
 
