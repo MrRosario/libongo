@@ -8,13 +8,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomePage implements OnInit {
   
-  //url1: string = 'http://localhost:3000/api/cotacao'
   url: string = 'https://libongo.herokuapp.com/api/cotacao';
   SimbMoeda1: string =  "$";
   SimbMoeda2: string = "Kz";
 
   dolar: any;
   euro: any;
+  valor1: any;
   resultCalc: any;
 
   constructor(private _http: HttpClient){}
@@ -38,4 +38,15 @@ export class HomePage implements OnInit {
     }
   }
 
+  trocarMoeda(simbAtual){
+    if( simbAtual  === "$"){
+      this.resultCalc = this.dolar * this.valor1;
+    } 
+    else if(simbAtual  === "€"){
+      this.resultCalc = this.euro * this.valor1;
+    } 
+    else {
+      this.resultCalc = this.valor1;
+    }
+  }
 }

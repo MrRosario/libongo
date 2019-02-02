@@ -11,7 +11,7 @@
   <div id="conversor">
     <ion-item class="selecionar-moeda">
       <ion-label>Moeda</ion-label> 
-      <ion-select  value="SimbMoeda1" class="firstSelect" [(ngModel)]="SimbMoeda1" okText="OK" cancelText="Cancelar" interface="popover">
+      <ion-select  value="SimbMoeda1" class="firstSelect" [(ngModel)]="SimbMoeda1" okText="OK" cancelText="Cancelar" (ionChange)="trocarMoeda($event.detail.value)" interface="action-sheet">
         <ion-select-option value="$">Dolar Americano</ion-select-option>
         <ion-select-option value="€">Euro Europa</ion-select-option>
         <ion-select-option value="Kz">Kwanza Angola</ion-select-option>
@@ -20,7 +20,7 @@
 
     <div class="conversor-wapper">
       <ion-label class="simbolo-moeda">{{ SimbMoeda1 }}</ion-label>
-      <ion-input autofocus class="valor" type="number" (input)="calcular($event.target.value)"> </ion-input>
+      <ion-input autofocus [(ngModel)]="valor1" class="valor" type="number" (input)="calcular($event.target.value)"> </ion-input>
     </div>
     
     <div id="icones-cima-baixo">
@@ -29,7 +29,7 @@
 
     <ion-item class="selecionar-moeda">
       <ion-label>Moeda</ion-label>
-      <ion-select value="SimbMoeda2" okText="OK" [(ngModel)]="SimbMoeda2" cancelText="Cancelar" interface="popover">
+      <ion-select value="SimbMoeda2" [(ngModel)]="SimbMoeda2"  okText="OK" cancelText="Cancelar" interface="action-sheet">
         <ion-select-option value="Kz">Kwanza Angola</ion-select-option>
       </ion-select>
     </ion-item>
@@ -45,3 +45,6 @@
     </div>
   </div>
 </ion-content>
+<ion-footer>
+  <span> &copy; 2019 Eugénio Rosário</span>
+</ion-footer>
